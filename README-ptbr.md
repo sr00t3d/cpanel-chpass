@@ -6,6 +6,8 @@
 [![Version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)](https://github.com/sr00t3d/cpanel-chpass/releases)
 [![Bash](https://img.shields.io/badge/Linux-Bash%204.0%2B-4EAA25?logo=gnu-bash&logoColor=white)](chpass.sh)
 
+![cpanel-chpass Cover](cpanel-chpass-cover.webp)
+
 O **`chpass.sh`** é uma CLI em Bash para alterar e rotacionar senhas de contas cPanel/WHM (com sincronização automática do MySQL) usando a API oficial **`whmapi1 passwd`** (com fallback para `/scripts/chpass`), geração criptográfica de senhas fortes (`/dev/urandom`), bloqueio estrito contra `root` e usuários de sistema (`UID < 500`), rotação em lote/revenda, `--dry-run`, salvamento em `chmod 600` e saídas `table`, `json` e `csv`.
 
 > **Inspiração Histórica:** Reimplementação limpa em Bash inspirada no `chpass` (`ecpp_2.pl`, 2012, **Michael Karr** / HostGator Toolbox). Substitui a chamada interna legada `Cpanel::ChangePasswd` e o gerador `rand()` fraco por `whmapi1`, senhas CSPRNG, dry-run e rotação em lote para resposta a incidentes.

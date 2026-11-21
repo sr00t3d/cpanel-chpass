@@ -6,6 +6,8 @@
 [![Version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg)](https://github.com/sr00t3d/cpanel-chpass/releases)
 [![Bash](https://img.shields.io/badge/Linux-Bash%204.0%2B-4EAA25?logo=gnu-bash&logoColor=white)](chpass.sh)
 
+![cpanel-chpass Cover](cpanel-chpass-cover.webp)
+
 **`chpass.sh`** is a hardened Bash CLI for changing and rotating cPanel/WHM account passwords (with automatic MySQL sync) using official **`whmapi1 passwd`** (with `/scripts/chpass` fallback), CSPRNG strong password generation (`/dev/urandom`), strict protection against `root` / system accounts (`UID < 500`), batch & reseller rotation, `--dry-run`, `chmod 600` credential export, and `table`, `json`, and `csv` outputs.
 
 > **Historical Inspiration:** Clean-room Bash reimplementation inspired by `chpass` (`ecpp_2.pl`, 2012, **Michael Karr** / HostGator Toolbox). Replaces the legacy internal Perl `Cpanel::ChangePasswd` call and weak `rand()` 12-char generator with official `whmapi1`, CSPRNG passwords, dry-run validation, and batch incident-response rotation.
